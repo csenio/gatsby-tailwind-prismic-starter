@@ -1,0 +1,28 @@
+{
+  "files.watcherExclude": {
+    "**/.cache/**": true,
+    "storybook-static": true
+  },
+  "files.exclude": {
+    "**/storybook-static": true,
+    "**/yarn-error.log": true,
+    "**/public": true,
+    "**/.cache": true,
+    "**/coverage": true,
+    "**/.github": true,
+    "**/.commitlintrc.js": true,
+    "**/.babelrc": true,
+    "**/.eslintignore": true,
+    "**/.eslintrc.js": true,
+    "**/next-env.d.ts": true,
+    "**/yarn.lock": true,
+    "**/.gitignore": true,
+    "**/.prettierignore": true,
+    "**/.prettierrc": true,
+    "**/next.config.js": true
+  },
+  "search.exclude": {
+    "**/.next": true,
+    "storybook-static": true
+  }
+}
