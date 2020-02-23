@@ -595,6 +595,8 @@ video {
   height: auto;
 }
 
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .container {
   width: 100%;
 }
@@ -622,6 +624,46 @@ video {
     max-width: 1280px;
   }
 }
+
+.btn {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #2c5282;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition-property: background-color, border-color, color, fill, stroke;
+  transition-property: background-color, border-color, color, fill, stroke;
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #2b6cb0;
+}
+
+.btn:active {
+  background-color: #3182ce;
+}
+
+.link {
+  font-weight: 700;
+  color: #2c5282;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #2b6cb0;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .sr-only {
   position: absolute;
@@ -4116,6 +4158,14 @@ video {
 
 .font-mono {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-display {
+  font-family: Montserrat;
+}
+
+.font-body {
+  font-family: Montserrat;
 }
 
 .font-hairline {
@@ -14412,6 +14462,29 @@ video {
           transition-duration: 1000ms;
 }
 
+.h-screen {
+  height: 100vh;
+  height: var(--app-height);
+}
+
+.gradient-white {
+  background: linear-gradient(247.05deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.container {
+  max-width: 72rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+body {
+  font-family: Montserrat;
+  color: #4a5568;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
@@ -17906,6 +17979,14 @@ video {
 
   .sm\:font-mono {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .sm\:font-display {
+    font-family: Montserrat;
+  }
+
+  .sm\:font-body {
+    font-family: Montserrat;
   }
 
   .sm\:font-hairline {
@@ -31699,6 +31780,14 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .md\:font-display {
+    font-family: Montserrat;
+  }
+
+  .md\:font-body {
+    font-family: Montserrat;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -45490,6 +45579,14 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-display {
+    font-family: Montserrat;
+  }
+
+  .lg\:font-body {
+    font-family: Montserrat;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -59279,6 +59376,14 @@ video {
 
   .xl\:font-mono {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .xl\:font-display {
+    font-family: Montserrat;
+  }
+
+  .xl\:font-body {
+    font-family: Montserrat;
   }
 
   .xl\:font-hairline {

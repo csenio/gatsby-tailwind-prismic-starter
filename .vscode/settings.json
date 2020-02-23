@@ -14,12 +14,12 @@
     "**/.babelrc": true,
     "**/.eslintignore": true,
     "**/.eslintrc.js": true,
+    "**/jsconfig.json": true,
     "**/next-env.d.ts": true,
     "**/yarn.lock": true,
     "**/.gitignore": true,
     "**/.prettierignore": true,
-    "**/.prettierrc": true,
-    "**/next.config.js": true
+    "**/.prettierrc": true
   },
   "search.exclude": {
     "**/.next": true,

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Tailwind Starter`,
+    description: `Starter for gatsby + tailwind + prismic`,
+    author: `@jescowuester`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,10 +21,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
     {
@@ -34,17 +34,46 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-alias-imports`,
+      options: {
+        aliases: {
+          '@styles': `src/styles`,
+          '@components': `src/components`,
+          '@images': `src/images`,
+          '@hooks': `src/hooks`,
+          '@lib': `src/lib`,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        printRejected: true, // Print removed selectors and processed file names
-        tailwind: true, // Enable tailwindcss support
+        printRejected: true,
+        tailwind: true,
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            subsets: [`latin`],
+            variants: [`400`, `500`, `700`],
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-prismic-graphql`,
+      options: {
+        repositoryName: 'hg-consulting',
+        previews: true,
+      },
+    },
     // `gatsby-plugin-offline`,
   ],
 }

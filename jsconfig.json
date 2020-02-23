@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components"],
+      "@images": ["src/images"],
+      "@lib": ["src/lib"],
+      "@hooks": ["src/hooks"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

@@ -28,6 +28,7 @@ module.exports = {
       alias: [
         ['@components', './src/components'],
         ['@styles', './src/styles'],
+        ['@images', './src/images'],
         ['@hooks', './src/hooks'],
         ['@config', './src/config'],
         ['@lib', './src/lib'],

@@ -1,51 +1,20 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
-import PropTypes from 'prop-types'
-import {useStaticQuery, graphql} from 'gatsby'
+import Nav from './Nav'
 
-import Header from './header'
 import '../css/tailwind.css'
 
-const Layout = ({children}) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+const Layout = ({children}) => (
+  <>
+    <Nav />
+    <main>{children}</main>
+    <footer className="bg-gray-800 md:p-12 text-white mt-auto">
+      <div className="container">
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
       </div>
-    </>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+    </footer>
+  </>
+)
 
 export default Layout

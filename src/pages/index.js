@@ -1,21 +1,42 @@
 import React from 'react'
-import {Link} from 'gatsby'
-
+import {graphql} from 'gatsby'
+import {RichText} from 'prismic-reactjs'
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1 class="text-4xl font-bold text-center text-blue-500">Hi people</h1>
-    <h2 className="font-bold text-3xl">aaa</h2>
-    <p>Now go build something great.</p>
-    <div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = ({data}) => {
+  console.log(data)
+  const content = data?.prismic?._allDocuments?.edges[0]?.node
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="container">
+        <h1 className="text-4xl font-bold text-gray-800">{RichText.asText(content.title)}</h1>
+        <h2 className="my-4 text-xl text-gray-700">{content?.subtitle[0]?.text}</h2>
+        <button className="p-3 bg-yellow-600 text-white font-bold hover:bg-yellow-700">
+          {content?.button_text}
+        </button>
+      </div>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  {
+    prismic {
+      _allDocuments(lang: "en-gb") {
+        edges {
+          node {
+            ... on PRISMIC_Landing_page {
+              title
+              subtitle
+              button_text
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

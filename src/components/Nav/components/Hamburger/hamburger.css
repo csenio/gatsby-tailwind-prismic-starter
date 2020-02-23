@@ -1,0 +1,41 @@
+.hamburger {
+  z-index: 2;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+  outline: none !important;
+}
+.hamburger[data-is-open='true'] {
+  transform: translateX(3px);
+}
+
+.hamburger > div {
+  @apply bg-gray-800;
+  height: 2px;
+  border-radius: 10px;
+  width: 20px;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.hamburger .top {
+  transform: none;
+}
+
+.hamburger[data-is-open='true'] .top {
+  transform: rotate(45deg) translateY(7px);
+}
+.hamburger .middle {
+  opacity: 1;
+}
+.hamburger[data-is-open='true'] .middle {
+  opacity: 0;
+}
+.hamburger .bottom {
+  transform: none;
+}
+.hamburger[data-is-open='true'] .bottom {
+  transform: rotate(-45deg) translateY(-7px);
+}
