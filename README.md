@@ -4,7 +4,7 @@
 
 
 <h1 align="center">
-  Gatsby Prismic Tailwind starter
+  the fast gatsby starter
 </h1>
 
 <img src="https://spacergif.org/spacer.gif" width="50"/>
