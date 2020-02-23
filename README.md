@@ -19,7 +19,7 @@ A starter for rapid website development.
 
 ## ✌️ How to use
 
-This is intended mostly for landing and marketing pages, scalability is not much of an issue so all styles should be applied inline via tailwind. Reusable classes can be added to tailwind.css. Reusable components into the components folder. Content should come from prismic and queried via page querys. Don't use `useStaticQuery` as it doesn't work with previews.
+This is intended mostly for landing and marketing pages, scalability is not much of an issue so all styles should be applied inline via tailwind. Reusable classes can be added to the `tailwind.css` file. Reusable components into the components folder. Content should come from prismic and queried via page querys. Don't use `useStaticQuery` as it doesn't work with previews.
 
 ## 💫 Deploy
 
