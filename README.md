@@ -7,9 +7,8 @@
   The Fast Gatsby Starter
 </h1>
 
-<img src="https://spacergif.org/spacer.gif" width="50"/>
 
-A starter to develop websites fast.
+A starter to develop websites as fast as possible.
 
 ## 🚀 Quick start
 
@@ -19,7 +18,10 @@ A starter to develop websites fast.
 
 This is intended mostly for landing and marketing pages, scalability is not much of an issue so all styles should be applied inline via tailwind. Reusable classes can be added to the `tailwind.css` file. Reusable components into the components folder. Content should come from prismic and queried via page querys. Don't use `useStaticQuery` as it doesn't work with previews.
 
+Internationalization is yet to be set up.
+
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jescowuester/gatsby-tailwind-starter)
+ 
 
