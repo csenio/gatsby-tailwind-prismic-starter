@@ -4,7 +4,7 @@
 
 
 <h1 align="center">
-  the fast gatsby starter
+  The Fast Gatsby Starter
 </h1>
 
 <img src="https://spacergif.org/spacer.gif" width="50"/>
