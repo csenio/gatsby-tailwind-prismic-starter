@@ -1,9 +1,7 @@
+const defaults = require('./site-config')
+
 module.exports = {
-  siteMetadata: {
-    title: `Tailwind Starter`,
-    description: `Starter for gatsby + tailwind + prismic`,
-    author: `@jescowuester`,
-  },
+  siteMetadata: defaults.siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -25,6 +23,7 @@ module.exports = {
         theme_color: `#fff`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
+        ...defaults.manifest,
       },
     },
     {
