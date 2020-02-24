@@ -4,7 +4,7 @@
 
 
 <h1 align="center">
-  The Fast Gatsby Starter
+  Gatsby Tailwind Prismic starter
 </h1>
 
 
